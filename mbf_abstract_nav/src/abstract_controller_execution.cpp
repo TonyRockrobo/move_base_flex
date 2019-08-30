@@ -272,6 +272,8 @@ namespace mbf_abstract_nav
           setState(CANCELED);
           condition_.notify_all();
           moving_ = false;
+          //Add by Tony
+          publishZeroVelocity();
           return;
         }
 
@@ -319,6 +321,8 @@ namespace mbf_abstract_nav
           // goal reached, tell it the controller
           condition_.notify_all();
           moving_ = false;
+          // add by Tony
+          publishZeroVelocity();
           // if not, keep moving
         }
         else
