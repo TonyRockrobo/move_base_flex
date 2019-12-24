@@ -273,8 +273,6 @@ namespace mbf_abstract_nav
           setState(CANCELED);
           condition_.notify_all();
           moving_ = false;
-          //Add by Tony
-          publishZeroVelocity();
           return;
         }
 
