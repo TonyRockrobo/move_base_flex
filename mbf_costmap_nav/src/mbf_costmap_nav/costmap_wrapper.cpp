@@ -127,10 +127,6 @@ void CostmapWrapper::clearArea()
       costmap->worldToMapNoBounds(end_point_x, end_point_y, end_x, end_y);
 
       costmap->clearInArea(start_x, start_y, end_x, end_y);
-
-      double ox    = costmap->getOriginX(), oy = costmap->getOriginY();
-      double width = costmap->getSizeInMetersX(), height = costmap->getSizeInMetersY();
-      costmap->addExtraBounds(ox, oy, ox + width, oy + height);
     }
   }
 }
